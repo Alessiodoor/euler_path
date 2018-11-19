@@ -1,0 +1,27 @@
+version "1.0"
+package "app"
+purpose "Euler_path ggo"
+
+# Options
+option "filename" f "Name of the file that contains the graph" string optional default="test.txt" 
+option "filetype" t "Formats types:
+e:\"edgelist\", 
+c:\"ncol\", 
+l:\"lgl\", 
+d:\"dimacs\", 
+gdb:\"graphdb\", 
+ml:\"graphml\", 
+gml:\"gml\", 
+p:\"pajeck\", 
+dl:\"dl\"\n" string optional default="e" 
+option "outfile" o "Name of the file to save the eulerian path" string optional default="stdout" 
+
+#graph_edgelist
+#graph_ncol
+#graph_lgl
+#graph_dimacs
+#graph_graphdb
+#graph_graphml
+#graph_gml
+#graph_pajek
+#graph_dl

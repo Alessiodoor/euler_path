@@ -1,0 +1,29 @@
+igraph 0.7.1 and libxml2-dev are required to be installed on the
+machine to compile and run the main.
+gengetopt is also required to compile the program.
+In order to compile:
+   open the terminal in the directory of the euler_pat.* and main.c
+   and run make.
+
+--help or -h are the options to get more infos about what options can
+  be passed. It is supposed that at least are passed -f <file name> to
+  specify what input file has to be read and -t <file type> to specify
+  the format the file is written. Moreover can be specified a name of
+  a file where to save the output of the program with -o <file output
+  name> if the output file doesn't exist it will be created, if it
+  exists it will be overwritten. If -o option isn't specified the
+  output will be printed on the console.
+  An example of how the program must be execute is:
+     ./main.exe -f test.exe -t e -o output.txt
+
+The output of the file is the sequence of nodes which has to be
+visited in oreder to create an eulerian path or cycle.
+
+The return values are:
+    0 if everythng goes right, the path exists and is written on the
+      file or on the output stream(the console usually)
+    1 if the graph isn't eulerian or semi-eulerian
+    2 if the input file doesn't exist
+    3 if the file type passed with option -t isn't valid
+    4 if there are problems in opening the output file in order to
+      write on it
